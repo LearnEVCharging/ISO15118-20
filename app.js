@@ -45,7 +45,7 @@ const legalContent = {
     <p>These Terms shall be governed and construed in accordance with the laws of California, United States, without regard to its conflict of law provisions.</p>
     
     <h3>10. Contact Information</h3>
-    <p>If you have any questions about these Terms of Service, please contact us at dbohr001@ucr.edu.</p>
+    <p>If you have any questions about these Terms of Service, please contact us at learnevcharging@gmail.com.</p>
   `,
   privacy: `
     <h2>Privacy Policy</h2>
@@ -117,7 +117,7 @@ const legalContent = {
     <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date.</p>
     
     <h3>11. Contact Us</h3>
-    <p>If you have any questions about this Privacy Policy, please contact us at dbohr001@ucr.edu.</p>
+    <p>If you have any questions about this Privacy Policy, please contact us at learnevcharging@gmail.com.</p>
   `,
   disclaimer: `
     <h2>Disclaimer</h2>
@@ -169,7 +169,7 @@ const legalContent = {
     <p>This disclaimer may be updated periodically to reflect changes in our policies or legal requirements. Users are responsible for reviewing the disclaimer regularly.</p>
     
     <h3>12. Contact Information</h3>
-    <p>If you have questions about this disclaimer or need clarification on any information provided, please contact us at dbohr001@ucr.edu.</p>
+    <p>If you have questions about this disclaimer or need clarification on any information provided, please contact us at learnevcharging@gmail.com.</p>
   `
 };
 
@@ -413,7 +413,7 @@ function initializeForms() {
       }
       
       // Success
-      showNotification(`✅ Thank you ${name}! Your message has been sent to dbohr001@ucr.edu. We will respond within 24 hours.`, 'success');
+      showNotification(`✅ Thank you ${name}! Your message has been sent to learnevcharging@gmail.com. We will respond within 24 hours.`, 'success');
       contactForm.reset();
       console.log('📞 Contact form submission successful');
     });
@@ -435,16 +435,16 @@ function initializeAdvertisingTiers() {
       
       switch(tier) {
         case 'header':
-          message = '✅ Thank you for your interest in Header Banner sponsorship ($2,500/month). We will contact you at dbohr001@ucr.edu with details and next steps.';
+          message = '✅ Thank you for your interest in Header Banner sponsorship ($2,500/month). We will contact you at learnevcharging@gmail.com with details and next steps.';
           break;
         case 'content':
-          message = '✅ Thank you for your interest in Mid-Content sponsorship ($1,500/month). We will contact you at dbohr001@ucr.edu with details and next steps.';
+          message = '✅ Thank you for your interest in Mid-Content sponsorship ($1,500/month). We will contact you at learnevcharging@gmail.com with details and next steps.';
           break;
         case 'footer':
-          message = '✅ Thank you for your interest in Footer sponsorship ($750/month). We will contact you at dbohr001@ucr.edu with details and next steps.';
+          message = '✅ Thank you for your interest in Footer sponsorship ($750/month). We will contact you at learnevcharging@gmail.com with details and next steps.';
           break;
         default:
-          message = '✅ Thank you for your interest in our advertising opportunities. We will contact you at dbohr001@ucr.edu with details.';
+          message = '✅ Thank you for your interest in our advertising opportunities. We will contact you at learnevcharging@gmail.com with details.';
       }
       
       showNotification(message, 'success');
