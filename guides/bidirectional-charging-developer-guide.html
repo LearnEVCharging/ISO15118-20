@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineering Bidirectional Charging With ISO 15118-20: A Developer's Playbook | ISO15118-20.com</title>
+    <meta name="description" content="A step-by-step developer guide to ISO 15118-20 bidirectional power transfer — dynamic vs scheduled modes, the message sequence, schedule exchange, and OCPP 2.1 integration.">
+    <meta name="keywords" content="ISO 15118-20, bidirectional charging, BPT, V2G, ScheduleExchange, OCPP 2.1, developer guide">
+    <meta name="author" content="Learn EV Charging">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+    <link rel="canonical" href="https://iso15118-20.com/guides/bidirectional-charging-developer-guide.html">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://iso15118-20.com/guides/bidirectional-charging-developer-guide.html">
+    <meta property="og:title" content="Engineering Bidirectional Charging With ISO 15118-20: A Developer's Playbook">
+    <meta property="og:description" content="A step-by-step developer guide to ISO 15118-20 bidirectional power transfer — dynamic vs scheduled modes, the message sequence, schedule exchange, and OCPP 2.1 integration.">
+    <meta property="og:site_name" content="ISO15118-20.com">
+    <meta property="og:image" content="https://iso15118-20.com/og-image.png">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Engineering Bidirectional Charging With ISO 15118-20: A Developer's Playbook">
+    <meta property="twitter:description" content="A step-by-step developer guide to ISO 15118-20 bidirectional power transfer — dynamic vs scheduled modes, the message sequence, schedule exchange, and OCPP 2.1 integration.">
+    <meta property="twitter:image" content="https://iso15118-20.com/og-image.png">
+    <link rel="stylesheet" href="/style.css">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Engineering Bidirectional Charging With ISO 15118-20: A Developer's Playbook",
+  "description": "A step-by-step developer guide to ISO 15118-20 bidirectional power transfer \u2014 dynamic vs scheduled modes, the message sequence, schedule exchange, and OCPP 2.1 integration.",
+  "author": {
+    "@type": "Organization",
+    "name": "Learn EV Charging",
+    "url": "https://learnevcharging.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "ISO15118-20.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://iso15118-20.com/og-image.png"
+    }
+  },
+  "datePublished": "2026-07-17",
+  "dateModified": "2026-07-17",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://iso15118-20.com/guides/bidirectional-charging-developer-guide.html"
+  },
+  "image": "https://iso15118-20.com/og-image.png"
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://iso15118-20.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Guides",
+      "item": "https://iso15118-20.com/#blog"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Bidirectional charging developer guide",
+      "item": "https://iso15118-20.com/guides/bidirectional-charging-developer-guide.html"
+    }
+  ]
+}
+    </script>
+    <style>
+      .guide-wrap{max-width:820px;margin:0 auto;padding:2.5rem 1rem 3rem;}
+      .guide-wrap h1{font-size:2.2rem;line-height:1.2;margin:.5rem 0 1.25rem;}
+      .guide-wrap h2{font-size:1.5rem;margin:2.25rem 0 .75rem;}
+      .guide-wrap p,.guide-wrap li{line-height:1.75;}
+      .guide-wrap ul,.guide-wrap ol{margin:0 0 1.1rem 1.25rem;}
+      .guide-wrap li{margin-bottom:.5rem;}
+      .breadcrumb{font-size:.9rem;opacity:.75;margin-bottom:1rem;}
+      .breadcrumb a{color:inherit;text-decoration:none;}
+      .breadcrumb a:hover{text-decoration:underline;}
+      .guide-table{width:100%;border-collapse:collapse;margin:1rem 0;}
+      .guide-table th,.guide-table td{border:1px solid var(--color-border,#d0d0d0);padding:.5rem .75rem;text-align:left;}
+      .guide-cta{text-align:center;margin-top:3rem;padding-top:2rem;border-top:1px solid var(--color-border,#d0d0d0);}
+      code{background:rgba(127,127,127,.15);padding:.1rem .35rem;border-radius:4px;font-size:.9em;}
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="nav-wrapper">
+                <div class="nav-brand"><a href="/" class="logo" style="text-decoration:none;">ISO15118-20.com</a></div>
+                <div class="nav-menu" id="navMenu">
+                    <a href="/" class="nav-link">Home</a>
+                    <a href="/#about" class="nav-link">About</a>
+                    <a href="/#technical" class="nav-link">Technical</a>
+                    <a href="/#blog" class="nav-link">Guides</a>
+                    <a href="/#faq" class="nav-link">FAQ</a>
+                    <a href="/#contact" class="nav-link">Contact</a>
+                </div>
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <article class="guide-wrap">
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+                <a href="/">Home</a> &rsaquo; <a href="/#blog">Guides</a> &rsaquo; <span>Bidirectional charging developer guide</span>
+            </nav>
+            <h1>Engineering Bidirectional Charging With ISO 15118-20: A Developer's Playbook</h1>
+            <p>This is a practical, step-by-step look at implementing ISO 15118-20 bidirectional power transfer (BPT) — from choosing a control mode to integrating with your back office.</p>
+
+<h2>Step 1 — Choose a BPT control mode</h2>
+<ul>
+<li><strong>Dynamic control mode.</strong> The charger issues frequent real-time power set-points — ideal for fast-response services such as frequency regulation.</li>
+<li><strong>Scheduled control mode.</strong> Time-indexed power schedules suit day-ahead energy markets and predictable optimization.</li>
+</ul>
+
+<h2>Step 2 — Map the message sequence</h2>
+<p>During service discovery, the charging station advertises its bidirectional power transfer service. The EV then requests service details and negotiates parameters such as the BPT channel and the vehicle's mobility and generator needs.</p>
+
+<h2>Step 3 — Handle schedule exchange</h2>
+<p>The <code>ScheduleExchange</code> request carries the departure time, target energy, and — optionally — the maximum energy the vehicle is willing to export, letting the charger optimize state-of-charge targets within grid limits.</p>
+
+<h2>Step 4 — Implement charge control</h2>
+<p>Track the requested dynamic set-point accurately; sloppy tracking causes conformance failures. Bidirectional DC converters with sufficient control bandwidth are recommended so the system can follow set-point changes cleanly.</p>
+
+<h2>Step 5 — Integrate the back office</h2>
+<p>OCPP 2.1 adds messages aligned with the ISO 15118-20 schedule model. Make sure your back office maps schedule identifiers correctly and handles negative power values (discharging) throughout.</p>
+
+<h2>Testing &amp; Field Checklist</h2>
+<ul>
+<li>Confirm the EV's discharge capability and measure round-trip efficiency.</li>
+<li>Validate anti-islanding and grid-protection behavior against the applicable interconnection standard.</li>
+<li>Use an established e-mobility test suite (for example, Vector CANoe's E-Mobility tooling) to exercise the ISO 15118-20 and TLS stack.</li>
+</ul>
+
+<h2>Why It Matters</h2>
+<p>Grid programs increasingly value distributed battery capacity. Utilities and regulators — for instance, California's vehicle-grid-integration efforts — are building toward large-scale V2G participation, and ISO 15118-20 compliance is what positions a charger to take part.</p>
+            <div class="guide-cta">
+                <h2>See It Working</h2>
+                <p>Watch a real ISO 15118-20 Plug &amp; Charge session end to end, or explore more EV-charging deep-dives.</p>
+                <div class="hero-actions">
+                    <a href="https://rey.learnevcharging.com/?utm_source=iso15118-20&amp;utm_medium=guide&amp;utm_campaign=rey" class="btn btn--primary btn--large">Try Plug &amp; Charge live &rarr;</a>
+                    <a href="https://learnevcharging.com/?utm_source=iso15118-20&amp;utm_medium=guide&amp;utm_campaign=brand" class="btn btn--secondary btn--large">Explore Learn EV Charging &rarr;</a>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p class="footer-copyright">&copy; <span id="copyright-year">2026</span> ISO15118-20.com. All rights reserved. &middot; <a href="/" style="color:inherit;">Home</a> &middot; <a href="/#faq" style="color:inherit;">FAQ</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+      var y=document.getElementById('copyright-year'); if(y){y.textContent=new Date().getFullYear();}
+      var t=document.getElementById('navToggle'), m=document.getElementById('navMenu');
+      if(t&&m){t.addEventListener('click',function(){m.classList.toggle('active');});}
+    </script>
+</body>
+</html>

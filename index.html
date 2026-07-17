@@ -145,7 +145,7 @@
                     <a href="#" class="nav-link" data-section="technical">Technical</a>
                     <a href="#" class="nav-link" data-section="features">Features</a>
                     <a href="#" class="nav-link" data-section="industry">Industry Trends</a>
-                    <a href="#" class="nav-link" data-section="blog">Blog</a>
+                    <a href="#" class="nav-link" data-section="blog">Guides</a>
                     <a href="#" class="nav-link" data-section="faq">FAQ</a>
                     <a href="#" class="nav-link" data-section="contact">Contact</a>
                 </div>
@@ -157,15 +157,6 @@
             </nav>
         </div>
     </header>
-
-    <!-- Advertisement Slot - Header -->
-    <div class="ad-section">
-        <div class="container">
-            <div class="ad-slot ad-header">
-                <div class="ad-placeholder">Advertisement - Header Banner (970x90)</div>
-            </div>
-        </div>
-    </div>
 
     <!-- Main Content -->
     <main class="main-content">
@@ -179,8 +170,8 @@
                             <h1 class="hero-title">The Future of EV Charging Communication</h1>
                             <p class="hero-subtitle">ISO15118-20 enables seamless Plug & Charge, bidirectional power transfer, and secure V2G communication for the next generation of electric mobility.</p>
                             <div class="hero-actions">
-                                <a href="https://learnevcharging.com/courses/iso-15118-2-implementation/?utm_source=iso15118-20&amp;utm_medium=hero&amp;utm_campaign=course" class="btn btn--primary btn--large">Take the ISO 15118 Course →</a>
-                                <a href="https://rey.learnevcharging.com/?utm_source=iso15118-20&amp;utm_medium=hero&amp;utm_campaign=rey" class="btn btn--secondary btn--large">Try Plug &amp; Charge live →</a>
+                                <a href="https://rey.learnevcharging.com/?utm_source=iso15118-20&amp;utm_medium=hero&amp;utm_campaign=rey" class="btn btn--primary btn--large">Try Plug &amp; Charge live →</a>
+                                <a href="https://learnevcharging.com/?utm_source=iso15118-20&amp;utm_medium=hero&amp;utm_campaign=brand" class="btn btn--secondary btn--large">Explore Learn EV Charging →</a>
                             </div>
                         </div>
                     </div>
@@ -232,7 +223,7 @@
                         </div>
                         <div class="stats-grid">
                             <div class="stat-card">
-                                <h3 class="stat-number">$32.26B</h3>
+                                <h3 class="stat-number">$32.2B</h3>
                                 <p class="stat-label">Market Size 2024</p>
                             </div>
                             <div class="stat-card">
@@ -241,31 +232,30 @@
                             </div>
                             <div class="stat-card">
                                 <h3 class="stat-number">25.5%</h3>
-                                <p class="stat-label">CAGR Growth</p>
+                                <p class="stat-label">CAGR (2025–2030)</p>
                             </div>
                             <div class="stat-card">
-                                <h3 class="stat-number">3M+</h3>
-                                <p class="stat-label">Global Charging Points</p>
+                                <h3 class="stat-number">5.3M+</h3>
+                                <p class="stat-label">Public Charging Points (2024)</p>
                             </div>
                         </div>
+                        <p class="stat-sources" style="text-align:center; font-size:0.85rem; opacity:0.7; margin-top:1.25rem;">Sources: <a href="https://www.grandviewresearch.com/press-release/global-electric-vehicle-ev-charging-infrastructure-market" target="_blank" rel="noopener">Grand View Research</a> (market size &amp; CAGR); <a href="https://www.iea.org/reports/global-ev-outlook-2025/electric-vehicle-charging" target="_blank" rel="noopener">IEA Global EV Outlook 2025</a> (charging points).</p>
                     </div>
                 </div>
             </section>
 
-            <!-- Newsletter Signup -->
+            <!-- Go Deeper CTA -->
             <section class="section-wrapper section-wrapper--primary">
                 <div class="container">
                     <div class="content-block text-center">
                         <div class="section-header">
-                            <h2 class="section-title section-title--light">Stay Updated</h2>
-                            <p class="section-description section-description--light">Get the latest updates on ISO15118-20 development and industry news.</p>
+                            <h2 class="section-title section-title--light">See ISO 15118-20 in Action</h2>
+                            <p class="section-description section-description--light">Watch a real Plug &amp; Charge session end to end, or explore more EV-charging deep-dives.</p>
                         </div>
-                        <form class="newsletter-form" id="newsletterForm">
-                            <div class="form-input-group">
-                                <input type="email" class="form-control form-control--large" placeholder="Enter your email address" required>
-                                <button type="submit" class="btn btn--success btn--large">Subscribe</button>
-                            </div>
-                        </form>
+                        <div class="hero-actions">
+                            <a href="https://rey.learnevcharging.com/?utm_source=iso15118-20&amp;utm_medium=cta&amp;utm_campaign=rey" class="btn btn--success btn--large">Try Plug &amp; Charge live →</a>
+                            <a href="https://learnevcharging.com/?utm_source=iso15118-20&amp;utm_medium=cta&amp;utm_campaign=brand" class="btn btn--secondary btn--large">Explore Learn EV Charging →</a>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -358,7 +348,7 @@
                                             <li>Enhanced encryption algorithms with Perfect Forward Secrecy</li>
                                             <li>Mutual authentication between vehicle and charging station</li>
                                             <li>Reduced handshake latency for faster connection establishment</li>
-                                            <li>Improved resistance to quantum computing attacks</li>
+                                            <li>Larger key sizes (secp521r1/Ed448) for stronger classical security — post-quantum algorithms remain a future work item at ISO/CharIN</li>
                                         </ul>
                                         
                                         <h4 class="accordion-subtitle">Certificate Management</h4>
@@ -401,7 +391,7 @@
                                     <div class="accordion-body">
                                         <h4 class="accordion-subtitle">EXI Encoding Enhancement</h4>
                                         <ul class="content-list">
-                                            <li>Efficient XML Information Set with improved compression</li>
+                                            <li>Efficient XML Interchange (EXI) with improved compression</li>
                                             <li>Reduced message size for faster transmission</li>
                                             <li>Enhanced parsing capabilities and schema validation</li>
                                             <li>Support for new message types and parameters</li>
@@ -502,7 +492,7 @@
                                 </div>
                                 <div class="benefit-item">
                                     <h4 class="benefit-item-title">Advanced Cryptography</h4>
-                                    <p class="benefit-item-text">Support for secp521r1 and Ed448 curves with quantum-resistant capabilities.</p>
+                                    <p class="benefit-item-text">Support for the stronger secp521r1 and Ed448 curves — a significant step up from ISO 15118-2's secp256r1.</p>
                                 </div>
                                 <div class="benefit-item">
                                     <h4 class="benefit-item-title">Certificate Management</h4>
@@ -552,35 +542,12 @@
                         <div class="insights-grid">
                             <div class="insight-card">
                                 <h3 class="insight-title">Market Size Growth</h3>
-                                <p class="insight-description">From $32.26B in 2024 to $125.39B by 2030, representing a CAGR of 25.5%</p>
-                                <div class="growth-chart">
-                                    <div class="chart-bar" style="height: 26%"><span>2024</span></div>
-                                    <div class="chart-bar" style="height: 35%"><span>2025</span></div>
-                                    <div class="chart-bar" style="height: 45%"><span>2026</span></div>
-                                    <div class="chart-bar" style="height: 58%"><span>2027</span></div>
-                                    <div class="chart-bar" style="height: 74%"><span>2028</span></div>
-                                    <div class="chart-bar" style="height: 90%"><span>2029</span></div>
-                                    <div class="chart-bar" style="height: 100%"><span>2030</span></div>
-                                </div>
+                                <p class="insight-description">The global EV charging infrastructure market is projected to grow from $32.2B in 2024 to $125.39B by 2030 — a 25.5% CAGR — according to <a href="https://www.grandviewresearch.com/press-release/global-electric-vehicle-ev-charging-infrastructure-market" target="_blank" rel="noopener">Grand View Research</a>.</p>
                             </div>
 
                             <div class="insight-card">
                                 <h3 class="insight-title">Technology Adoption</h3>
-                                <p class="insight-description">ISO15118-20 adoption is accelerating with major OEMs and charging providers implementing support</p>
-                                <div class="timeline">
-                                    <div class="timeline-item">
-                                        <strong>2025:</strong> Early adopters and pilot programs
-                                    </div>
-                                    <div class="timeline-item">
-                                        <strong>2026:</strong> Mainstream implementation begins
-                                    </div>
-                                    <div class="timeline-item">
-                                        <strong>2027:</strong> Widespread deployment across networks
-                                    </div>
-                                    <div class="timeline-item">
-                                        <strong>2028:</strong> Standard becomes dominant protocol
-                                    </div>
-                                </div>
+                                <p class="insight-description">ISO 15118-20 was published in 2022 and is in early adoption. OEMs, charge-point operators, and certification bodies are progressively rolling out support — typically alongside ISO 15118-2 and DIN 70121 during the transition.</p>
                             </div>
 
                             <div class="insight-card">
@@ -620,7 +587,7 @@
                             <div class="predictions-grid">
                                 <div class="prediction-card">
                                     <h3 class="prediction-title">V2G Revenue Streams</h3>
-                                    <p class="prediction-text">EV owners will generate significant revenue through grid services, with some estimates suggesting $1,000-$3,000 annually per vehicle.</p>
+                                    <p class="prediction-text">As bidirectional charging matures, EV owners and fleets can earn from grid services — frequency regulation, demand response, and energy arbitrage — by discharging at peak times.</p>
                                 </div>
                                 <div class="prediction-card">
                                     <h3 class="prediction-title">Autonomous Charging</h3>
@@ -641,23 +608,15 @@
         <section id="blog" class="section">
             <div class="container">
                 <div class="page-header">
-                    <h2 class="page-title">Blog & Resources</h2>
-                    <p class="page-description">Stay informed with the latest insights, analysis, and developments in ISO15118-20 technology</p>
+                    <h2 class="page-title">Guides & Resources</h2>
+                    <p class="page-description">In-depth technical guides on implementing ISO 15118-20 — security, bidirectional charging, Plug &amp; Charge, and certification.</p>
                 </div>
-                
+
                 <div class="content-wrapper">
-                    <div class="blog-search-wrapper">
-                        <input type="text" class="form-control form-control--search" id="blogSearch" placeholder="Search blog posts..." />
-                    </div>
-                    
                     <div class="blog-grid" id="blogPosts">
-                        <article class="blog-card" data-post-id="01-iso15118-20-whats-new">
+                        <article class="blog-card">
                             <div class="blog-card-header">
-                                <h2 class="blog-card-title">ISO15118-20: What's New and Why It Matters for EV Charging</h2>
-                                <div class="blog-card-meta">
-                                    <span class="blog-author">By Technical Team</span>
-                                    <span class="blog-date">January 15, 2025</span>
-                                </div>
+                                <h2 class="blog-card-title"><a href="/guides/iso-15118-20-vs-15118-2.html">ISO 15118-20 Explained: Key Upgrades From ISO 15118-2</a></h2>
                             </div>
                             <div class="blog-card-content">
                                 <div class="blog-tags">
@@ -665,94 +624,78 @@
                                     <span class="tag">Standards</span>
                                     <span class="tag">Overview</span>
                                 </div>
-                                <p class="blog-excerpt">Comprehensive overview of the new features and improvements in ISO15118-20, including bidirectional charging, enhanced security, and wireless communication support.</p>
+                                <p class="blog-excerpt">The most important upgrades over ISO 15118-2 — bidirectional power transfer, TLS 1.3 security, wireless power transfer, and multi-contract handling — and what they mean for CPOs, OEMs, and vendors.</p>
                             </div>
                             <div class="blog-card-footer">
-                                <a href="https://learnevcharging.com/courses/iso-15118-2-implementation/?utm_source=iso15118-20&amp;utm_medium=blog&amp;utm_campaign=course" class="btn btn--outline btn--small">Learn it in the course →</a>
+                                <a href="/guides/iso-15118-20-vs-15118-2.html" class="btn btn--outline btn--small">Read the guide →</a>
                             </div>
                         </article>
                         
-                        <article class="blog-card" data-post-id="02-plug-and-charge-evolution">
+                        <article class="blog-card">
                             <div class="blog-card-header">
-                                <h2 class="blog-card-title">The Evolution of Plug & Charge: From ISO15118-2 to 15118-20</h2>
-                                <div class="blog-card-meta">
-                                    <span class="blog-author">By Protocol Experts</span>
-                                    <span class="blog-date">January 10, 2025</span>
-                                </div>
+                                <h2 class="blog-card-title"><a href="/guides/plug-and-charge-iso-15118-20.html">Demystifying Plug &amp; Charge: Certificates, PKI &amp; TLS 1.3</a></h2>
                             </div>
                             <div class="blog-card-content">
                                 <div class="blog-tags">
                                     <span class="tag">Plug&Charge</span>
-                                    <span class="tag">Evolution</span>
+                                    <span class="tag">PKI</span>
                                     <span class="tag">Security</span>
                                 </div>
-                                <p class="blog-excerpt">Deep dive into how Plug & Charge functionality has evolved in ISO15118-20, with improved security, multiple contract support, and enhanced user experience.</p>
+                                <p class="blog-excerpt">How Plug &amp; Charge works under ISO 15118-20 — the certificate hierarchy, the TLS 1.3 session flow, contract installation, and the common pitfalls to avoid.</p>
                             </div>
                             <div class="blog-card-footer">
-                                <a href="https://rey.learnevcharging.com/?utm_source=iso15118-20&amp;utm_medium=blog&amp;utm_campaign=rey" class="btn btn--outline btn--small">See Plug &amp; Charge live in Rey →</a>
+                                <a href="/guides/plug-and-charge-iso-15118-20.html" class="btn btn--outline btn--small">Read the guide →</a>
                             </div>
                         </article>
                         
-                        <article class="blog-card" data-post-id="03-bidirectional-charging-v2g">
+                        <article class="blog-card">
                             <div class="blog-card-header">
-                                <h2 class="blog-card-title">Bidirectional Charging and V2G: The Future of Energy Management</h2>
-                                <div class="blog-card-meta">
-                                    <span class="blog-author">By Energy Systems Team</span>
-                                    <span class="blog-date">January 5, 2025</span>
-                                </div>
+                                <h2 class="blog-card-title"><a href="/guides/bidirectional-charging-developer-guide.html">Engineering Bidirectional Charging: A Developer's Playbook</a></h2>
                             </div>
                             <div class="blog-card-content">
                                 <div class="blog-tags">
                                     <span class="tag">V2G</span>
                                     <span class="tag">Bidirectional</span>
-                                    <span class="tag">Energy</span>
+                                    <span class="tag">BPT</span>
                                 </div>
-                                <p class="blog-excerpt">Exploring how ISO15118-20 enables vehicle-to-grid applications, energy storage, and grid stabilization through bidirectional power transfer capabilities.</p>
+                                <p class="blog-excerpt">A step-by-step developer guide to ISO 15118-20 bidirectional power transfer — dynamic vs scheduled modes, the message sequence, schedule exchange, and OCPP 2.1 back-office integration.</p>
                             </div>
                             <div class="blog-card-footer">
-                                <a href="https://learnevcharging.com/courses/iso-15118-2-implementation/?utm_source=iso15118-20&amp;utm_medium=blog&amp;utm_campaign=course" class="btn btn--outline btn--small">Learn it in the course →</a>
+                                <a href="/guides/bidirectional-charging-developer-guide.html" class="btn btn--outline btn--small">Read the guide →</a>
                             </div>
                         </article>
                         
-                        <article class="blog-card" data-post-id="04-security-enhancements">
+                        <article class="blog-card">
                             <div class="blog-card-header">
-                                <h2 class="blog-card-title">Enhanced Security in ISO15118-20: Mutual TLS and Advanced Cryptography</h2>
-                                <div class="blog-card-meta">
-                                    <span class="blog-author">By Security Team</span>
-                                    <span class="blog-date">December 28, 2024</span>
-                                </div>
+                                <h2 class="blog-card-title"><a href="/guides/tls-1-3-security-iso-15118-20.html">TLS 1.3 Security in ISO 15118-20: What Changed and Why</a></h2>
                             </div>
                             <div class="blog-card-content">
                                 <div class="blog-tags">
                                     <span class="tag">Security</span>
-                                    <span class="tag">TLS</span>
+                                    <span class="tag">TLS 1.3</span>
                                     <span class="tag">Cryptography</span>
                                 </div>
-                                <p class="blog-excerpt">Technical analysis of the security improvements in ISO15118-20, including mutual TLS 1.3, enhanced cryptographic algorithms, and PKI infrastructure changes.</p>
+                                <p class="blog-excerpt">The move from TLS 1.2 to mandatory TLS 1.3, the required cipher suites, larger ECDSA-P521/Ed448 certificates, mutual authentication, and where post-quantum work is heading.</p>
                             </div>
                             <div class="blog-card-footer">
-                                <a href="https://rey.learnevcharging.com/?utm_source=iso15118-20&amp;utm_medium=blog&amp;utm_campaign=rey" class="btn btn--outline btn--small">See the cert flow live in Rey →</a>
+                                <a href="/guides/tls-1-3-security-iso-15118-20.html" class="btn btn--outline btn--small">Read the guide →</a>
                             </div>
                         </article>
                         
-                        <article class="blog-card" data-post-id="05-implementation-guide">
+                        <article class="blog-card">
                             <div class="blog-card-header">
-                                <h2 class="blog-card-title">ISO15118-20 Implementation Guide: From Planning to Production</h2>
-                                <div class="blog-card-meta">
-                                    <span class="blog-author">By Implementation Team</span>
-                                    <span class="blog-date">December 20, 2024</span>
-                                </div>
+                                <h2 class="blog-card-title"><a href="/guides/iso-15118-20-certification-guide.html">How to Get ISO 15118-20 Certified: Testing Roadmap &amp; Pitfalls</a></h2>
                             </div>
                             <div class="blog-card-content">
                                 <div class="blog-tags">
-                                    <span class="tag">Implementation</span>
-                                    <span class="tag">Guide</span>
-                                    <span class="tag">Development</span>
+                                    <span class="tag">Certification</span>
+                                    <span class="tag">Testing</span>
+                                    <span class="tag">Conformance</span>
                                 </div>
-                                <p class="blog-excerpt">Complete guide for implementing ISO15118-20 in your EV charging infrastructure, covering planning, development, testing, and deployment phases.</p>
+                                <p class="blog-excerpt">The certification path for ISO 15118-20 — pre-compliance audit, conformance testing, interoperability testivals, security audit, and the failure modes that trip teams up.</p>
                             </div>
                             <div class="blog-card-footer">
-                                <a href="https://learnevcharging.com/courses/iso-15118-2-implementation/?utm_source=iso15118-20&amp;utm_medium=blog&amp;utm_campaign=course" class="btn btn--outline btn--small">Take the course →</a>
+                                <a href="/guides/iso-15118-20-certification-guide.html" class="btn btn--outline btn--small">Read the guide →</a>
                             </div>
                         </article>
                     </div>
@@ -839,245 +782,19 @@
                 </div>
                 
                 <div class="content-wrapper">
-                    <div class="contact-layout">
-                        <div class="contact-info">
-                            <div class="contact-section">
-                                <h2 class="contact-title">Get in Touch</h2>
-                                <p class="contact-description">Have questions about ISO15118-20 implementation or need technical support? We're here to help.</p>
-                                
-                                <div class="contact-details">
-                                    <h3 class="contact-subtitle">Contact Information</h3>
-                                    <div class="contact-item">
-                                        <strong>Website:</strong> iso15118-20.com
-                                    </div>
-                                </div>
-                                
-                                <div class="contact-social">
-                                    <h3 class="contact-subtitle">Related</h3>
-                                    <div class="social-links">
-                                        <a href="https://learnevcharging.com/?utm_source=iso15118-20&amp;utm_medium=contact&amp;utm_campaign=brand" target="_blank" rel="noopener" class="social-link">Learn EV Charging</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-form-wrapper">
-                            <form class="contact-form" id="contactForm">
-                                <div class="form-grid">
-                                    <div class="form-group">
-                                        <label for="name" class="form-label">Name *</label>
-                                        <input type="text" id="name" name="name" class="form-control" required>
-                                    </div>
-                                    
-                                    <div class="form-group">
-                                        <label for="email" class="form-label">Email *</label>
-                                        <input type="email" id="email" name="email" class="form-control" required>
-                                    </div>
-                                </div>
-                                
-                                <div class="form-group">
-                                    <label for="company" class="form-label">Company</label>
-                                    <input type="text" id="company" name="company" class="form-control">
-                                </div>
-                                
-                                <div class="form-group">
-                                    <label for="subject" class="form-label">Subject *</label>
-                                    <select id="subject" name="subject" class="form-control" required>
-                                        <option value="">Select a subject</option>
-                                        <option value="technical">Technical Support</option>
-                                        <option value="business">Business Inquiry</option>
-                                        <option value="partnership">Partnership</option>
-                                        <option value="advertising">Advertising</option>
-                                        <option value="other">Other</option>
-                                    </select>
-                                </div>
-                                
-                                <div class="form-group">
-                                    <label for="message" class="form-label">Message *</label>
-                                    <textarea id="message" name="message" class="form-control" rows="6" required></textarea>
-                                </div>
-                                
-                                <div class="form-actions">
-                                    <button type="submit" class="btn btn--primary btn--large btn--full-width">Send Message</button>
-                                </div>
-                            </form>
+                    <div class="content-block text-center">
+                        <h2 class="content-title">Get in Touch</h2>
+                        <p class="content-text">Have a question about ISO 15118-20 or the Rey demo? Send us an email and we'll get back to you.</p>
+                        <div class="hero-actions">
+                            <a href="mailto:learnevcharging@gmail.com" class="btn btn--primary btn--large">Email learnevcharging@gmail.com</a>
+                            <a href="https://learnevcharging.com/?utm_source=iso15118-20&amp;utm_medium=contact&amp;utm_campaign=brand" target="_blank" rel="noopener" class="btn btn--secondary btn--large">Visit Learn EV Charging →</a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Advertise Section -->
-        <section id="advertise" class="section">
-            <div class="container">
-                <div class="page-header">
-                    <h2 class="page-title">Advertising & Sponsorship</h2>
-                    <p class="page-description">Connect with industry professionals and decision-makers in the EV charging ecosystem</p>
-                </div>
-                
-                <div class="content-wrapper">
-                    <div class="advertise-intro">
-                        <h2 class="content-title">Reach EV Charging Professionals</h2>
-                        <p class="content-text">Connect with our growing audience of EV charging industry professionals, engineers, and decision-makers. Our platform attracts thousands of qualified visitors monthly looking for ISO15118-20 solutions and expertise.</p>
-                        
-                        <div class="audience-stats">
-                            <div class="stat-item">
-                                <h3 class="stat-number">25K+</h3>
-                                <p class="stat-label">Monthly Visitors</p>
-                            </div>
-                            <div class="stat-item">
-                                <h3 class="stat-number">75%</h3>
-                                <p class="stat-label">Technical Professionals</p>
-                            </div>
-                            <div class="stat-item">
-                                <h3 class="stat-number">45%</h3>
-                                <p class="stat-label">Decision Makers</p>
-                            </div>
-                            <div class="stat-item">
-                                <h3 class="stat-number">35</h3>
-                                <p class="stat-label">Countries Represented</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="sponsorship-section">
-                        <h2 class="content-title">Sponsorship Opportunities</h2>
-                        <div class="pricing-grid">
-                            <div class="pricing-card pricing-card--featured">
-                                <div class="pricing-badge">Most Popular</div>
-                                <div class="pricing-header">
-                                    <h3 class="pricing-title">Header Banner</h3>
-                                    <div class="pricing-price">$2,500<span class="pricing-period">/month</span></div>
-                                    <p class="pricing-description">Premium top placement with maximum visibility</p>
-                                </div>
-                                <div class="pricing-features">
-                                    <ul class="feature-list">
-                                        <li>970x90px desktop, 320x50px mobile</li>
-                                        <li>Above-the-fold visibility on all pages</li>
-                                        <li>Newsletter header placement</li>
-                                        <li>Priority in sponsor listings</li>
-                                        <li>Performance analytics included</li>
-                                    </ul>
-                                </div>
-                                <div class="pricing-footer">
-                                    <button class="btn btn--primary btn--large btn--full-width" data-tier="header">Get Started</button>
-                                </div>
-                            </div>
-                            
-                            <div class="pricing-card">
-                                <div class="pricing-header">
-                                    <h3 class="pricing-title">Mid-Content Sponsor</h3>
-                                    <div class="pricing-price">$1,500<span class="pricing-period">/month</span></div>
-                                    <p class="pricing-description">Native content integration within articles</p>
-                                </div>
-                                <div class="pricing-features">
-                                    <ul class="feature-list">
-                                        <li>300x250px within content sections</li>
-                                        <li>Contextual placement for relevance</li>
-                                        <li>Newsletter mid-content placement</li>
-                                        <li>Social media mentions included</li>
-                                        <li>Monthly performance reports</li>
-                                    </ul>
-                                </div>
-                                <div class="pricing-footer">
-                                    <button class="btn btn--outline btn--large btn--full-width" data-tier="content">Get Started</button>
-                                </div>
-                            </div>
-                            
-                            <div class="pricing-card">
-                                <div class="pricing-header">
-                                    <h3 class="pricing-title">Footer Sponsor</h3>
-                                    <div class="pricing-price">$750<span class="pricing-period">/month</span></div>
-                                    <p class="pricing-description">Footer banner placement on all pages</p>
-                                </div>
-                                <div class="pricing-features">
-                                    <ul class="feature-list">
-                                        <li>468x60px at page bottom</li>
-                                        <li>Footer placement on all pages</li>
-                                        <li>Newsletter footer placement</li>
-                                        <li>Logo in sponsor directory</li>
-                                        <li>Basic analytics included</li>
-                                    </ul>
-                                </div>
-                                <div class="pricing-footer">
-                                    <button class="btn btn--outline btn--large btn--full-width" data-tier="footer">Get Started</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="custom-packages">
-                        <h2 class="content-title">Custom Sponsorship Packages</h2>
-                        <p class="content-text">We offer custom sponsorship packages tailored to your specific marketing objectives:</p>
-                        <div class="packages-grid">
-                            <div class="package-item">
-                                <h4 class="package-title">Thought Leadership</h4>
-                                <p class="package-description">Sponsored articles and whitepapers</p>
-                            </div>
-                            <div class="package-item">
-                                <h4 class="package-title">Event Promotion</h4>
-                                <p class="package-description">Conference and webinar sponsorships</p>
-                            </div>
-                            <div class="package-item">
-                                <h4 class="package-title">Product Launches</h4>
-                                <p class="package-description">Dedicated promotional campaigns</p>
-                            </div>
-                            <div class="package-item">
-                                <h4 class="package-title">Industry Reports</h4>
-                                <p class="package-description">Co-branded research and analysis</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="benefits-section">
-                        <h2 class="content-title">Why Advertise With Us</h2>
-                        <div class="benefits-grid">
-                            <div class="benefit-card">
-                                <div class="benefit-icon">🎯</div>
-                                <h4 class="benefit-title">Targeted Audience</h4>
-                                <p class="benefit-description">Reach professionals specifically interested in ISO15118-20 and EV charging technology.</p>
-                            </div>
-                            <div class="benefit-card">
-                                <div class="benefit-icon">🏆</div>
-                                <h4 class="benefit-title">Technical Authority</h4>
-                                <p class="benefit-description">Leverage our reputation as a trusted source for accurate, technical information.</p>
-                            </div>
-                            <div class="benefit-card">
-                                <div class="benefit-icon">📈</div>
-                                <h4 class="benefit-title">Growing Market</h4>
-                                <p class="benefit-description">Capitalize on the rapidly expanding EV charging and V2G markets.</p>
-                            </div>
-                            <div class="benefit-card">
-                                <div class="benefit-icon">🤝</div>
-                                <h4 class="benefit-title">Professional Network</h4>
-                                <p class="benefit-description">Connect with engineers, managers, and executives from leading companies.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="cta-section">
-                        <div class="cta-content">
-                            <h2 class="cta-title">Ready to Get Started?</h2>
-                            <p class="cta-description">Contact us to discuss your advertising and sponsorship needs. We'll work with you to create a custom package that meets your marketing objectives and budget.</p>
-                            <div class="cta-actions">
-                                <button class="btn btn--primary btn--large" data-section="contact">Contact Us</button>
-                                <a href="mailto:learnevcharging@gmail.com" class="btn btn--secondary btn--large">Email Directly</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
     </main>
-
-    <!-- Advertisement Slot - Mobile -->
-    <div class="ad-section ad-section--mobile">
-        <div class="container">
-            <div class="ad-slot ad-mobile">
-                <div class="ad-placeholder">Mobile Ad (320x50)</div>
-            </div>
-        </div>
-    </div>
 
     <!-- Footer -->
     <footer class="footer">
@@ -1111,7 +828,7 @@
                     <ul class="footer-links">
                         <li><a href="https://www.iso.org/standard/77845.html" target="_blank" rel="noopener" class="footer-link">ISO Standard</a></li>
                         <li><a href="https://www.charinev.org/" target="_blank" rel="noopener" class="footer-link">CharIN</a></li>
-                        <li><a href="#" data-section="blog" class="footer-link">Blog</a></li>
+                        <li><a href="#" data-section="blog" class="footer-link">Guides</a></li>
                         <li><a href="#" data-section="faq" class="footer-link">FAQ</a></li>
                     </ul>
                 </div>
@@ -1128,7 +845,7 @@
             </div>
             
             <div class="footer-bottom">
-                <p class="footer-copyright">&copy; 2025 ISO15118-20.com. All rights reserved.</p>
+                <p class="footer-copyright">&copy; <span id="copyright-year">2026</span> ISO15118-20.com. All rights reserved.</p>
             </div>
         </div>
     </footer>

@@ -4,7 +4,7 @@
 const legalContent = {
   terms: `
     <h2>Terms of Service</h2>
-    <p><strong>Last Updated:</strong> January 20, 2025</p>
+    <p><strong>Last Updated:</strong> July 17, 2026</p>
     
     <h3>1. Acceptance of Terms</h3>
     <p>By accessing and using the ISO15118-20.com website ("the Website"), you agree to be bound by these Terms of Service ("Terms") and all applicable laws and regulations. If you do not agree with any of these terms, you are prohibited from using or accessing this site.</p>
@@ -49,79 +49,29 @@ const legalContent = {
   `,
   privacy: `
     <h2>Privacy Policy</h2>
-    <p><strong>Last Updated:</strong> January 20, 2025</p>
-    
-    <h3>1. Introduction</h3>
-    <p>ISO15118-20.com ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how your personal information is collected, used, and disclosed by ISO15118-20.com.</p>
-    
+    <p><strong>Last Updated:</strong> July 17, 2026</p>
+
+    <h3>1. Overview</h3>
+    <p>ISO15118-20.com is an informational website about the ISO 15118-20 EV charging communication standard. We have deliberately kept it simple: the site does not run analytics or advertising trackers, does not set cookies, and does not ask you to create an account or submit personal information through forms.</p>
+
     <h3>2. Information We Collect</h3>
-    
-    <h4>Information You Provide to Us</h4>
-    <p>We collect information you provide directly to us, such as when you:</p>
-    <ul>
-      <li>Subscribe to our newsletter</li>
-      <li>Contact us through our contact form</li>
-      <li>Participate in surveys or promotions</li>
-      <li>Create an account or profile</li>
-    </ul>
-    
-    <h4>Information We Collect Automatically</h4>
-    <p>When you access or use our Website, we automatically collect information about you, including:</p>
-    <ul>
-      <li>Log data (IP address, browser type, pages visited, time spent)</li>
-      <li>Device information (device type, operating system, unique device identifiers)</li>
-      <li>Usage information (features used, preferences, interactions)</li>
-    </ul>
-    
-    <h3>3. How We Use Your Information</h3>
-    <p>We use the information we collect to:</p>
-    <ul>
-      <li>Provide, maintain, and improve our Website and services</li>
-      <li>Send you newsletters, updates, and promotional materials</li>
-      <li>Respond to your inquiries and provide customer support</li>
-      <li>Analyze usage patterns and improve user experience</li>
-      <li>Comply with legal obligations and protect our rights</li>
-    </ul>
-    
-    <h3>4. Information Sharing and Disclosure</h3>
-    <p>We may share your information in the following circumstances:</p>
-    <ul>
-      <li>With your consent or at your direction</li>
-      <li>With service providers who assist us in operating our Website</li>
-      <li>For legal reasons, such as to comply with laws or protect rights</li>
-      <li>In connection with a merger, acquisition, or sale of assets</li>
-    </ul>
-    
-    <h3>5. Data Security</h3>
-    <p>We take reasonable measures to protect your personal information from unauthorized access, use, or disclosure. However, no internet transmission is completely secure, and we cannot guarantee absolute security.</p>
-    
-    <h3>6. Cookies and Tracking Technologies</h3>
-    <p>We use cookies and similar tracking technologies to collect and use personal information about you. You can control cookies through your browser settings, but disabling cookies may affect Website functionality.</p>
-    
-    <h3>7. Your Rights and Choices</h3>
-    <p>You have certain rights regarding your personal information:</p>
-    <ul>
-      <li>Access: Request a copy of your personal information</li>
-      <li>Correction: Request correction of inaccurate information</li>
-      <li>Deletion: Request deletion of your personal information</li>
-      <li>Opt-out: Unsubscribe from marketing communications</li>
-    </ul>
-    
-    <h3>8. International Data Transfers</h3>
-    <p>Your information may be transferred to and processed in countries other than your country of residence. These countries may have different data protection laws than your country.</p>
-    
-    <h3>9. Children's Privacy</h3>
-    <p>Our Website is not intended for children under 13 years of age. We do not knowingly collect personal information from children under 13.</p>
-    
-    <h3>10. Changes to This Privacy Policy</h3>
-    <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date.</p>
-    
-    <h3>11. Contact Us</h3>
+    <p>We do not collect personal information through this website. There are no newsletter or contact forms that transmit data to us. If you choose to email us directly, we will receive the information you include in that email (such as your email address and message) and use it only to respond to you.</p>
+
+    <h3>3. Hosting Logs</h3>
+    <p>Like most websites, our hosting provider may automatically record standard technical request data (such as IP address and browser type) for security and reliability purposes. We do not use this data to identify individuals.</p>
+
+    <h3>4. Third-Party Links</h3>
+    <p>This site links to external websites (for example, learnevcharging.com and standards bodies such as ISO and CharIN). Those sites have their own privacy policies, and we are not responsible for their practices.</p>
+
+    <h3>5. Changes to This Policy</h3>
+    <p>We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated "Last Updated" date.</p>
+
+    <h3>6. Contact Us</h3>
     <p>If you have any questions about this Privacy Policy, please contact us at learnevcharging@gmail.com.</p>
   `,
   disclaimer: `
     <h2>Disclaimer</h2>
-    <p><strong>Last Updated:</strong> January 20, 2025</p>
+    <p><strong>Last Updated:</strong> July 17, 2026</p>
     
     <h3>1. General Information</h3>
     <p>The information provided on ISO15118-20.com is for general informational and educational purposes only. It should not be considered as professional advice for specific situations or implementations.</p>
@@ -253,8 +203,24 @@ function initializeNavigation() {
     });
   }
 
-  // Initialize with home section
-  setActiveSection('home');
+  // Open the section named in the URL hash (e.g. /#technical from a guide page), else home
+  const initialHash = window.location.hash.slice(1);
+  if (initialHash && document.getElementById(initialHash)) {
+    setActiveSection(initialHash);
+  } else if (document.getElementById('home')) {
+    setActiveSection('home');
+  }
+
+  // React to cross-page hash links like /#faq
+  window.addEventListener('hashchange', () => {
+    const h = window.location.hash.slice(1);
+    if (h && document.getElementById(h)) setActiveSection(h);
+  });
+
+  // Keep the footer copyright year current
+  const yearEl = document.getElementById('copyright-year');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+
   console.log('✅ Navigation system initialized successfully');
 }
 
@@ -325,133 +291,8 @@ function initializeFAQ() {
   });
 }
 
-// Blog search functionality
-function initializeBlogSearch() {
-  console.log('🔍 Initializing blog search...');
-  
-  const searchInput = document.getElementById('blogSearch');
-  const blogCards = document.querySelectorAll('.blog-card');
-  
-  if (searchInput && blogCards.length > 0) {
-    console.log(`📚 Blog search initialized with ${blogCards.length} posts`);
-    
-    searchInput.addEventListener('input', (e) => {
-      const searchTerm = e.target.value.toLowerCase().trim();
-      console.log(`🔎 Searching for: "${searchTerm}"`);
-      
-      let visibleCount = 0;
-      
-      blogCards.forEach((card, index) => {
-        const title = card.querySelector('.blog-card-title').textContent.toLowerCase();
-        const excerpt = card.querySelector('.blog-excerpt').textContent.toLowerCase();
-        const tags = Array.from(card.querySelectorAll('.tag')).map(tag => tag.textContent.toLowerCase());
-        
-        const searchableText = `${title} ${excerpt} ${tags.join(' ')}`;
-        
-        if (searchTerm === '' || searchableText.includes(searchTerm)) {
-          card.style.display = 'block';
-          visibleCount++;
-        } else {
-          card.style.display = 'none';
-        }
-      });
-      
-      console.log(`📊 Search results: ${visibleCount} posts visible`);
-    });
-  } else {
-    console.log('⚠️ Blog search elements not found');
-  }
-}
 
-// Initialize forms
-function initializeForms() {
-  console.log('📝 Initializing form handling...');
-  
-  // Newsletter form
-  const newsletterForm = document.getElementById('newsletterForm');
-  if (newsletterForm) {
-    console.log('📧 Newsletter form found');
-    newsletterForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const emailInput = newsletterForm.querySelector('input[type="email"]');
-      const email = emailInput.value.trim();
-      
-      if (validateEmail(email)) {
-        showNotification('✅ Thank you for subscribing! You will receive updates about ISO15118-20 developments and industry trends.', 'success');
-        newsletterForm.reset();
-        console.log('📧 Newsletter subscription successful');
-      } else {
-        showNotification('❌ Please enter a valid email address.', 'error');
-        console.log('❌ Newsletter subscription failed - invalid email');
-      }
-    });
-  }
 
-  // Contact form
-  const contactForm = document.getElementById('contactForm');
-  if (contactForm) {
-    console.log('📞 Contact form found');
-    contactForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const formData = new FormData(contactForm);
-      const email = formData.get('email');
-      const name = formData.get('name');
-      const subject = formData.get('subject');
-      const message = formData.get('message');
-
-      // Validation
-      if (!name || !email || !subject || !message) {
-        showNotification('❌ Please fill out all required fields.', 'error');
-        console.log('❌ Contact form validation failed - missing fields');
-        return;
-      }
-      
-      if (!validateEmail(email)) {
-        showNotification('❌ Please enter a valid email address.', 'error');
-        console.log('❌ Contact form validation failed - invalid email');
-        return;
-      }
-      
-      // Success
-      showNotification(`✅ Thank you ${name}! Your message has been sent to learnevcharging@gmail.com. We will respond within 24 hours.`, 'success');
-      contactForm.reset();
-      console.log('📞 Contact form submission successful');
-    });
-  }
-}
-
-// Initialize advertising tier interactions
-function initializeAdvertisingTiers() {
-  console.log('💰 Initializing advertising tiers...');
-  
-  const tierButtons = document.querySelectorAll('[data-tier]');
-  console.log(`🎯 Found ${tierButtons.length} advertising tier buttons`);
-  
-  tierButtons.forEach((button, index) => {
-    button.addEventListener('click', (e) => {
-      e.preventDefault();
-      const tier = e.target.dataset.tier;
-      let message = '';
-      
-      switch(tier) {
-        case 'header':
-          message = '✅ Thank you for your interest in Header Banner sponsorship ($2,500/month). We will contact you at learnevcharging@gmail.com with details and next steps.';
-          break;
-        case 'content':
-          message = '✅ Thank you for your interest in Mid-Content sponsorship ($1,500/month). We will contact you at learnevcharging@gmail.com with details and next steps.';
-          break;
-        case 'footer':
-          message = '✅ Thank you for your interest in Footer sponsorship ($750/month). We will contact you at learnevcharging@gmail.com with details and next steps.';
-          break;
-        default:
-          message = '✅ Thank you for your interest in our advertising opportunities. We will contact you at learnevcharging@gmail.com with details.';
-      }
-      
-      showNotification(message, 'success');
-      console.log(`💰 Advertising tier selected: ${tier}`);
-    });
-  });
-}
 
 // Utility functions
 function validateEmail(email) {
@@ -689,9 +530,6 @@ function initializeWebsite() {
     initializeNavigation();
     initializeAccordions();
     initializeFAQ();
-    initializeBlogSearch();
-    initializeForms();
-    initializeAdvertisingTiers();
     initializeLegalModals();
     initializeModalHandlers();
     
@@ -754,6 +592,5 @@ document.addEventListener('visibilitychange', function() {
 window.ISO15118Website = {
   showNotification,
   validateEmail,
-  initializeNavigation,
-  initializeForms
+  initializeNavigation
 };

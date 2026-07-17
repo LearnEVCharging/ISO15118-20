@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISO 15118-20 Explained: Key Upgrades From ISO 15118-2 | ISO15118-20.com</title>
+    <meta name="description" content="The most important upgrades ISO 15118-20 brings over ISO 15118-2 — bidirectional power transfer, TLS 1.3 security, wireless power transfer, and multi-contract handling.">
+    <meta name="keywords" content="ISO 15118-20, ISO 15118-2, bidirectional power transfer, V2G, Plug and Charge, EV charging standard">
+    <meta name="author" content="Learn EV Charging">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+    <link rel="canonical" href="https://iso15118-20.com/guides/iso-15118-20-vs-15118-2.html">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://iso15118-20.com/guides/iso-15118-20-vs-15118-2.html">
+    <meta property="og:title" content="ISO 15118-20 Explained: Key Upgrades From ISO 15118-2">
+    <meta property="og:description" content="The most important upgrades ISO 15118-20 brings over ISO 15118-2 — bidirectional power transfer, TLS 1.3 security, wireless power transfer, and multi-contract handling.">
+    <meta property="og:site_name" content="ISO15118-20.com">
+    <meta property="og:image" content="https://iso15118-20.com/og-image.png">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="ISO 15118-20 Explained: Key Upgrades From ISO 15118-2">
+    <meta property="twitter:description" content="The most important upgrades ISO 15118-20 brings over ISO 15118-2 — bidirectional power transfer, TLS 1.3 security, wireless power transfer, and multi-contract handling.">
+    <meta property="twitter:image" content="https://iso15118-20.com/og-image.png">
+    <link rel="stylesheet" href="/style.css">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "ISO 15118-20 Explained: Key Upgrades From ISO 15118-2",
+  "description": "The most important upgrades ISO 15118-20 brings over ISO 15118-2 \u2014 bidirectional power transfer, TLS 1.3 security, wireless power transfer, and multi-contract handling.",
+  "author": {
+    "@type": "Organization",
+    "name": "Learn EV Charging",
+    "url": "https://learnevcharging.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "ISO15118-20.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://iso15118-20.com/og-image.png"
+    }
+  },
+  "datePublished": "2026-07-17",
+  "dateModified": "2026-07-17",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://iso15118-20.com/guides/iso-15118-20-vs-15118-2.html"
+  },
+  "image": "https://iso15118-20.com/og-image.png"
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://iso15118-20.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Guides",
+      "item": "https://iso15118-20.com/#blog"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "ISO 15118-20 vs 15118-2",
+      "item": "https://iso15118-20.com/guides/iso-15118-20-vs-15118-2.html"
+    }
+  ]
+}
+    </script>
+    <style>
+      .guide-wrap{max-width:820px;margin:0 auto;padding:2.5rem 1rem 3rem;}
+      .guide-wrap h1{font-size:2.2rem;line-height:1.2;margin:.5rem 0 1.25rem;}
+      .guide-wrap h2{font-size:1.5rem;margin:2.25rem 0 .75rem;}
+      .guide-wrap p,.guide-wrap li{line-height:1.75;}
+      .guide-wrap ul,.guide-wrap ol{margin:0 0 1.1rem 1.25rem;}
+      .guide-wrap li{margin-bottom:.5rem;}
+      .breadcrumb{font-size:.9rem;opacity:.75;margin-bottom:1rem;}
+      .breadcrumb a{color:inherit;text-decoration:none;}
+      .breadcrumb a:hover{text-decoration:underline;}
+      .guide-table{width:100%;border-collapse:collapse;margin:1rem 0;}
+      .guide-table th,.guide-table td{border:1px solid var(--color-border,#d0d0d0);padding:.5rem .75rem;text-align:left;}
+      .guide-cta{text-align:center;margin-top:3rem;padding-top:2rem;border-top:1px solid var(--color-border,#d0d0d0);}
+      code{background:rgba(127,127,127,.15);padding:.1rem .35rem;border-radius:4px;font-size:.9em;}
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="nav-wrapper">
+                <div class="nav-brand"><a href="/" class="logo" style="text-decoration:none;">ISO15118-20.com</a></div>
+                <div class="nav-menu" id="navMenu">
+                    <a href="/" class="nav-link">Home</a>
+                    <a href="/#about" class="nav-link">About</a>
+                    <a href="/#technical" class="nav-link">Technical</a>
+                    <a href="/#blog" class="nav-link">Guides</a>
+                    <a href="/#faq" class="nav-link">FAQ</a>
+                    <a href="/#contact" class="nav-link">Contact</a>
+                </div>
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <article class="guide-wrap">
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+                <a href="/">Home</a> &rsaquo; <a href="/#blog">Guides</a> &rsaquo; <span>ISO 15118-20 vs 15118-2</span>
+            </nav>
+            <h1>ISO 15118-20 Explained: Key Upgrades From ISO 15118-2</h1>
+            <p>ISO 15118-20 is the second generation of the vehicle-to-grid (V2G) communication standard between electric vehicles (EVs) and charging equipment (EVSE). Where ISO 15118-2 established Plug &amp; Charge and smart charging, ISO 15118-20 (published in 2022) extends the protocol family to cover true bidirectional energy transfer, wireless power transfer, stronger security, and richer data exchange. Here are the upgrades that matter most for charge-point operators (CPOs), OEMs, and software vendors.</p>
+
+<h2>1. Bidirectional Power Transfer (BPT)</h2>
+<ul>
+<li><strong>Dynamic and scheduled modes.</strong> ISO 15118-20 defines both a <em>dynamic</em> control mode, where the charger requests rapid set-point changes, and a <em>scheduled</em> control mode, where an entire power schedule is exchanged in one payload.</li>
+<li><strong>AC and DC support.</strong> Unlike ISO 15118-2, which limited bidirectional flow to AC, ISO 15118-20 explicitly supports DC BPT.</li>
+<li><strong>Grid-services ready.</strong> Fine-grained power schedules let the EV participate in frequency regulation and demand-response programs.</li>
+</ul>
+
+<h2>2. Enhanced Security (TLS 1.3)</h2>
+<ul>
+<li><strong>Mandatory mutual authentication.</strong> Sessions negotiate TLS 1.3 with certificate-based mutual authentication.</li>
+<li><strong>Larger keys.</strong> ISO 15118-20 moves to stronger elliptic-curve profiles (secp521r1 and Ed448) versus secp256r1 in ISO 15118-2, which increases certificate sizes and secure-storage requirements.</li>
+<li><strong>Second-generation PKI.</strong> The V2G public-key infrastructure is restructured to handle multi-contract and roaming scenarios.</li>
+</ul>
+
+<h2>3. Multi-Contract Handling</h2>
+<p>A single EV can present multiple e-mobility contracts and let the charging station select one based on tariff, roaming agreement, or user preference — a meaningful improvement for fleets that work with several mobility service providers.</p>
+
+<h2>4. Wireless Power Transfer &amp; Automated Connection</h2>
+<p>ISO 15118-20 adds message sets for wireless (inductive) power transfer and for automated connection devices such as pantographs — the groundwork for hands-free depot charging of buses and other fleet vehicles.</p>
+
+<h2>5. Multiplexed Communication</h2>
+<p>A multiplexing layer allows multiple logical channels over a single V2G connection, so services can be added or renegotiated without tearing down the session.</p>
+
+<h2>Practical Implications</h2>
+<p>Plan for firmware upgrades on both the EV side (EVCC) and the charger side (SECC) to support TLS 1.3, larger certificates, and dynamic BPT. Back-office systems (OCPP 2.1) also need to process bidirectional schedules.</p>
+
+<h2>Looking Ahead</h2>
+<p>ISO 15118-20 is not directly backward compatible with ISO 15118-2. During the transition, coexistence strategies — dual protocol stacks and DIN 70121 fallback — will be common. Early adopters can unlock premium V2G and grid-service use cases sooner.</p>
+            <div class="guide-cta">
+                <h2>See It Working</h2>
+                <p>Watch a real ISO 15118-20 Plug &amp; Charge session end to end, or explore more EV-charging deep-dives.</p>
+                <div class="hero-actions">
+                    <a href="https://rey.learnevcharging.com/?utm_source=iso15118-20&amp;utm_medium=guide&amp;utm_campaign=rey" class="btn btn--primary btn--large">Try Plug &amp; Charge live &rarr;</a>
+                    <a href="https://learnevcharging.com/?utm_source=iso15118-20&amp;utm_medium=guide&amp;utm_campaign=brand" class="btn btn--secondary btn--large">Explore Learn EV Charging &rarr;</a>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p class="footer-copyright">&copy; <span id="copyright-year">2026</span> ISO15118-20.com. All rights reserved. &middot; <a href="/" style="color:inherit;">Home</a> &middot; <a href="/#faq" style="color:inherit;">FAQ</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+      var y=document.getElementById('copyright-year'); if(y){y.textContent=new Date().getFullYear();}
+      var t=document.getElementById('navToggle'), m=document.getElementById('navMenu');
+      if(t&&m){t.addEventListener('click',function(){m.classList.toggle('active');});}
+    </script>
+</body>
+</html>
