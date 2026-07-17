@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+# Block Render's preview subdomain from being indexed as duplicate content;
+# the canonical site is https://iso15118-20.com/
+Sitemap: https://iso15118-20.com/sitemap.xml
